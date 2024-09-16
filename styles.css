@@ -178,6 +178,10 @@ input[type="tel"] {
     cursor: pointer;
 }
 
+.item:hover {
+    font-weight: 700;
+}
+
 /* Try your Wedding look today */
 .try-look-btn {
     width: 45px;
