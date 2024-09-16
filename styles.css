@@ -311,6 +311,7 @@ input[type="tel"] {
 .slider-option.active {
     background: linear-gradient(to right, #eee0e2, #dcc3c4);
     border: 1px solid #832729;
+    box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
 }
 
 .btn-box {
