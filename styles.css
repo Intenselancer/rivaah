@@ -90,7 +90,7 @@ input[type="tel"] {
     font-weight: 600;
 }
 
-.chip-set::-webkit-scrollbar {
+.chip-set::-webkit-scrollbar, .slider-wrapper::-webkit-scrollbar {
     display: none;
 }
 
@@ -177,6 +177,56 @@ input[type="tel"] {
     background-repeat: no-repeat;
     cursor: pointer;
 }
+
+/* Try your Wedding look today */
+.try-look-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #832729;
+    background: transparent;
+    transition: 0.25s ease;
+    border-radius: 50%;
+    color: #832729;
+}
+
+.try-look-btn:hover {
+    background: #832729;
+    color: #fff;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-item-absolute {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.slider-item-span {
+    position: absolute;
+    bottom: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+    display: flex;
+    gap: 10px;
+    color: #832729;
+    background: linear-gradient(to right, #eee0e2, #dcc3c4);
+    left: 1rem;
+    align-items: center;
+}
+
+.slider-item-span span {
+    font-size: 12px;
+}
+
+.slider-wrapper {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
 
 
 /* Get in Touch Slider */
@@ -317,3 +367,4 @@ input[type="tel"] {
         border: unset;
     }
 }
+
