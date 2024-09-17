@@ -170,12 +170,14 @@ input[type="tel"] {
 .subnav {
     margin-top: 15px;
     background: linear-gradient(to right, #832729, #631517);
-    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* Smooth transition */
     overflow-x: auto;
 }
 
 .show-subnav {
-    opacity: 1; /* Visible when scrolled to the section */
+    opacity: 1;
+    /* Visible when scrolled to the section */
     visibility: visible;
 }
 
@@ -211,8 +213,16 @@ input[type="tel"] {
 }
 
 .occassion {
-    margin-top: 18px;
+    margin-top: 5rem;
     margin-bottom: 18px;
+}
+
+.outfit {
+    margin-top: 4rem;
+}
+
+.checklist {
+    margin-top: 4rem;
 }
 
 .outfit-tile {
@@ -254,6 +264,43 @@ input[type="tel"] {
 
 .choice {
     color: #832729;
+}
+
+/* checklist */
+.checkbox-1 {
+    position: absolute;
+    top: 6.3rem;
+    left: 20rem;
+}
+
+.checkbox-2 {
+    position: absolute;
+    top: 16rem;
+    left: 19rem;
+}
+
+.checkbox-3 {
+    position: absolute;
+    top: 18.5rem;
+    left: 30rem;
+}
+
+.checkbox-4 {
+    position: absolute;
+    top: 19.5rem;
+    left: 19rem;
+}
+
+.checkbox-5 {
+    position: absolute;
+    top: 25rem;
+    left: 19rem;
+}
+
+.checkbox-6 {
+    position: absolute;
+    top: 33rem;
+    left: 15rem;
 }
 
 /* Try your Wedding look today */
@@ -313,6 +360,19 @@ input[type="tel"] {
     flex-basis: 50%;
 }
 
+.mar-t {
+    margin-top: 3rem;
+}
+
+.txt-sm {
+    font-size: 12px;
+}
+
+.check-head {
+    font-size: 4rem;
+    color: #490A0C;
+}
+
 .image-cover {
     object-fit: cover;
 }
@@ -345,6 +405,11 @@ input[type="tel"] {
 
 .gradient-btn {
     background: linear-gradient(to right, #832729, #631517);
+    transition: all 300ms ease-in-out;
+}
+
+.gradient-btn:hover {
+    opacity: 70%;
 }
 
 .small-font {
@@ -467,7 +532,51 @@ input[type="tel"] {
         font-size: 10px;
     }
 
+    .check-head {
+        font-size: 2rem;
+    }
+
     .ring {
         width: 80px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    /* checklist */
+    .checkbox-1 {
+        position: absolute;
+        top: 55px;
+        left: 170px;
+    }
+
+    .checkbox-2 {
+        position: absolute;
+        top: 133px;
+        left: 170px;
+    }
+
+    .checkbox-3 {
+        position: absolute;
+        top: 150px;
+        left: 270px;
+    }
+
+    .checkbox-4 {
+        position: absolute;
+        top: 160px;
+        left: 170px;
+    }
+
+    .checkbox-5 {
+        position: absolute;
+        top: 200px;
+        left: 170px;
+    }
+
+    .checkbox-6 {
+        position: absolute;
+        top: 290px;
+        left: 130px;
     }
 }
