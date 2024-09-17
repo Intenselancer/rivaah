@@ -47,7 +47,8 @@ function getOptionMappingOcc() {
         0: 'Nishayathartham',
         [contentSlideWidthOcc]: 'Gauri-Puja',
         [2 * contentSlideWidthOcc]: 'Muhurtam', // Adjust based on the number of slides
-        [3 * contentSlideWidthOcc]: 'Reception' // Adjust based on the number of slides
+        [3 * contentSlideWidthOcc]: 'Reception', // Adjust based on the number of slides
+        [4 * contentSlideWidthOcc]: 'Explore-all-jewellery' // Adjust based on the number of slides
     };
 }
 
@@ -94,7 +95,8 @@ function moveSliderByOptionOcc(selectedOption) {
         'Nishayathartham': { content: 0, image: 0 },
         'Gauri-Puja': { content: contentSlideWidthOcc, image: imageSlideWidthOcc },
         'Muhurtam': { content: 2 * contentSlideWidthOcc, image: 2 * imageSlideWidthOcc },
-        'Reception': { content: 3 * contentSlideWidthOcc, image: 3 * imageSlideWidthOcc }
+        'Reception': { content: 3 * contentSlideWidthOcc, image: 3 * imageSlideWidthOcc },
+        'Explore-all-jewellery': { content: 4 * contentSlideWidthOcc, image: 3 * imageSlideWidthOcc },
     };
 
     const { content: contentOffset, image: imageOffset } = slideWidthsByOptionOcc[selectedOption];
