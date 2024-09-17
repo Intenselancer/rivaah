@@ -101,7 +101,7 @@
     </section>
 
     <!-- Occassion Section -->
-    <section class="container occassion mt-5">
+    <section class="container occassion">
         <!-- titles -->
         <div class="d-flex flex-column align-items-center justify-content-center">
             <h2 class="headings">Choose My Occassion</h2>
@@ -111,7 +111,7 @@
         <!-- sub-navbar -->
         <div class="d-flex flex-column w-100 align-items-center justify-content-center overflow-hidden">
             <!-- Options -->
-            <div class="d-flex rounded-pill gap-1 p-1 px-2 subnav justify-content-lg-center gap-3">
+            <div class="d-flex rounded-pill gap-1 p-1 subnav justify-content-lg-center gap-3">
                 <span class="subnav-option px-3 active" data-option="Nishayathartham">Nishayathartham</span>
                 <span class="subnav-option px-3" data-option="Gauri-Puja">Gauri Puja</span>
                 <span class="subnav-option px-3" data-option="Muhurtam">Muhurtam</span>
@@ -295,12 +295,14 @@
                         <div class="d-flex image-slider-occ w-100 h-100">
                             <img src="./assets/nischayathatham.png" style="width: 325px; height: 425px;"
                                 class="image-contain" alt="store image">
-                            <img src="./assets/gauripuja.png" style="width: 325px; height: 425px;"
-                                class="image-contain" alt="appointment image">
-                            <img src="./assets/muhurtam.png" style="width: 325px; height: 425px;"
-                                class="image-contain" alt="expert image">
-                            <img src="./assets/reception.png" style="width: 325px; height: 425px;"
-                                class="image-contain" alt="expert image">
+                            <img src="./assets/gauripuja.png" style="width: 325px; height: 425px;" class="image-contain"
+                                alt="appointment image">
+                            <img src="./assets/muhurtam.png" style="width: 325px; height: 425px;" class="image-contain"
+                                alt="expert image">
+                            <img src="./assets/reception.png" style="width: 325px; height: 425px;" class="image-contain"
+                                alt="expert image">
+                            <img src="./assets/reception.png" style="width: 325px; height: 425px;" class="image-contain"
+                                alt="expert image">
                         </div>
                     </div>
                 </div>
@@ -309,11 +311,11 @@
         </div>
 
         <!-- Muhurtham Outfits -->
-        <div class="d-flex flex-column mt-4">
-            <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="d-flex flex-column outfit">
+            <!-- <div class="d-flex flex-column align-items-center justify-content-center">
                 <h2 class="headings">Muhurtam Outfits</h2>
                 <p class="text-muted assu-p">Explore By Category</p>
-            </div>
+            </div> -->
 
             <div class="container d-flex align-items-center justify-content-lg-center chip-set mt-4 gap-3 gap-md-5">
                 <div class="d-flex flex-column align-items-center gap-2 item">
@@ -332,29 +334,82 @@
 
                 <div class="d-flex flex-column align-items-center gap-2 item">
                     <div class="d-flex align-items-center justify-content-center outfit-tile p-4">
-                        <img src="./assets/rings.png" alt="Long Nacklace" width="60%">
+                        <img src="./assets/rings.png" alt="Long Nacklace" width="95%">
                     </div>
                     <p class="dark-text">Rings</p>
                 </div>
 
                 <div class="d-flex flex-column align-items-center gap-2 item">
                     <div class="d-flex align-items-center justify-content-center outfit-tile p-4">
-                        <img src="./assets/bangle.png" alt="Long Nacklace" width="60%">
+                        <img src="./assets/bangle.png" alt="Long Nacklace" width="95%">
                     </div>
                     <p class="dark-text">Bangle</p>
                 </div>
 
                 <div class="d-flex flex-column align-items-center gap-2 item">
                     <div class="d-flex align-items-center justify-content-center outfit-tile p-4">
-                        <img src="./assets/accessories.png" alt="Long Nacklace" width="50%">
+                        <img src="./assets/accessories.png" alt="Long Nacklace" width="95%">
                     </div>
                     <p class="dark-text">Accessories</p>
                 </div>
             </div>
+
+            <!-- checklist -->
+            <div class="d-flex flex-column-reverse flex-lg-row checklist">
+                <div class="d-flex flex-basis-50 align-items-center justify-content-end">
+                    <div class="d-flex flex-column justify-content-center gap-2">
+                        <h1 class="check-head text-center text-lg-start mt-2">Muhurtam Ceremony Checklist</h1>
+                        <p>Having a Muhurtam Ceremony checklist means you are much less likely to forget any important
+                            tasks on the wedding planning list, and will help to keep you organised throughout the
+                            entire
+                            process. It is also really handy when it comes to knowing where to start and what order to
+                            do things
+                            in.
+                        </p>
+                        <button style="width: fit-content;"
+                            class="gradient-btn border-0 d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
+                            <span class="text-white">Get Started</span>
+                            <div class="chevron-btn">
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </button>
+
+                        <div class="d-flex align-items-center mar-t gap-md-2">
+                            <div class="d-flex align-items-center">
+                                <img class="ring" src="./assets/Checklist-below-icon-normal.png" alt="Rings-avatar">
+                            </div>
+                            <div class="d-flex flex-column justify-content-center mt-2">
+                                <h6 class="headings">2584 Brides Found This Useful</h6>
+                                <p class="text-muted txt-sm">2584 Families in India Likes Tanishq Jewellery</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image and Checkboxes -->
+                <div class="d-flex flex-basis-50 align-items-center justify-content-center justify-content-lg-end">
+                    <div class="d-flex justify-content-center" style="position: relative;">
+                        <img src="./assets/checklist-img.png" alt="Checklist Image" width="85%">
+
+                        <!-- Checkboxes positioned absolutely -->
+
+                        <!-- Nacklace -->
+                        <input type="checkbox" class="checkbox-1" >
+                        <!-- Neclace-set -->
+                        <input type="checkbox" class="checkbox-2" >
+                        <!-- ring -->
+                        <input type="checkbox" class="checkbox-3" >
+                        <!-- Neclace-set-2 -->
+                        <input type="checkbox" class="checkbox-4" >
+                        <!-- Neclace-set-3 -->
+                        <input type="checkbox" class="checkbox-5" >
+                        <!-- bangles -->
+                        <input type="checkbox" class="checkbox-6" >
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-
-        <!-- slider -->
     </section>
 
 
@@ -511,7 +566,7 @@
                                 </div>
                                 <p>Tanishq store locator will guide you to the nearest store</p>
                                 <button style="width: fit-content;"
-                                    class="gradient-btn d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
+                                    class="gradient-btn border-0 d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
                                     <span class="text-white">Book Now</span>
                                     <div class="chevron-btn">
                                         <i class="bi bi-chevron-right"></i>
@@ -532,7 +587,7 @@
                                     store
                                     address.</p>
                                 <button style="width: fit-content;"
-                                    class="gradient-btn d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
+                                    class="gradient-btn border-0 d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
                                     <span class="text-white">Book Now</span>
                                     <div class="chevron-btn">
                                         <i class="bi bi-chevron-right"></i>
@@ -550,7 +605,7 @@
                                 <p>Chat with our expert regarding your queries on diamond, wedding jewellery and much
                                     more.</p>
                                 <button style="width: fit-content;"
-                                    class="gradient-btn d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
+                                    class="gradient-btn border-0 d-flex gap-3 align-self-lg-start align-self-center align-items-center text-white px-4 py-2 rounded-pill">
                                     <span class="text-white">Book Now</span>
                                     <div class="chevron-btn">
                                         <i class="bi bi-chevron-right"></i>
