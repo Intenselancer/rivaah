@@ -63,16 +63,18 @@ input[type="tel"] {
 
 /* Hero Section */
 .hero {
+    min-height: 75vh;
     background-image: url('./assets/Hero-bg.png');
     background-size: cover;
     border-radius: 15px;
 }
 
 .hero-box {
-    width: 30%;
+    width: 32%;
     background: rgba(35, 13, 14, 0.3);
     border-radius: 14px;
     border: 1px solid #cdbbbb;
+    margin-bottom: 20px;
 }
 
 .hero-box-mob {
@@ -90,11 +92,14 @@ input[type="tel"] {
     font-weight: 600;
 }
 
-.chip-set::-webkit-scrollbar, .slider-wrapper::-webkit-scrollbar {
+.chip-set::-webkit-scrollbar,
+.slider-wrapper::-webkit-scrollbar,
+.subnav::-webkit-scrollbar {
     display: none;
 }
 
 .chip-set {
+    margin-top: 25px;
     overflow-x: auto;
 }
 
@@ -157,6 +162,54 @@ input[type="tel"] {
 
 
 /* occassion section */
+/* .subnav {
+    overflow-x: auto;
+    background: linear-gradient(to right, #832729, #631517);
+} */
+
+.subnav {
+    margin-top: 15px;
+    background: linear-gradient(to right, #832729, #631517);
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Smooth transition */
+    overflow-x: auto;
+}
+
+.show-subnav {
+    opacity: 1; /* Visible when scrolled to the section */
+    visibility: visible;
+}
+
+.fixed-subnav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    margin-top: 10px;
+    /* left: 0; */
+    z-index: 1000;
+    background: linear-gradient(to right, #832729, #631517);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.subnav-option {
+    height: 50px;
+    white-space: nowrap;
+    border-radius: 3rem;
+    display: flex;
+    color: #efefef;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.subnav-option.active {
+    background: linear-gradient(to right, #F2E7E9, #D9BDBE);
+    box-shadow: 0 4px 8px rgba(11, 11, 11, 0.2);
+    color: #631517;
+}
+
 .occassion {
     margin-top: 18px;
     margin-bottom: 18px;
@@ -178,8 +231,29 @@ input[type="tel"] {
     cursor: pointer;
 }
 
+.content-slider-occ {
+    transition: 0.25s ease;
+}
+
+.image-slider-occ {
+    transition: 0.25s ease;
+}
+
+.arr {
+    background: linear-gradient(to right, #832729, #631517);
+    color: white;
+}
+
+.ring {
+    width: 90px;
+}
+
 .item:hover {
     font-weight: 700;
+}
+
+.choice {
+    color: #832729;
 }
 
 /* Try your Wedding look today */
@@ -243,8 +317,12 @@ input[type="tel"] {
     object-fit: cover;
 }
 
+.image-contain {
+    object-fit: contain;
+}
+
 .dark-text {
-    color:#832729;
+    color: #832729;
 }
 
 .dark-border {
@@ -252,7 +330,7 @@ input[type="tel"] {
 }
 
 .transparent-text {
-    color: rgba(0,0,0,0.75);
+    color: rgba(0, 0, 0, 0.75);
 }
 
 .chevron-btn {
@@ -298,7 +376,7 @@ input[type="tel"] {
 
 .content-card {
     min-width: 500px;
-    height: 425px; 
+    min-height: 425px;
     position: relative;
 }
 
@@ -325,7 +403,8 @@ input[type="tel"] {
 
 @media (min-width: 993px) {
     .content-slider {
-        --slide-width: 500px; /* Set the width for screens 992px and above */
+        --slide-width: 500px;
+        /* Set the width for screens 992px and above */
     }
 }
 
@@ -366,10 +445,29 @@ input[type="tel"] {
         justify-content: center;
         text-align: center;
         align-items: center;
-    } 
+    }
 
     .slider-option.active {
         border: unset;
     }
-}
 
+    .choice {
+        font-size: 15px;
+    }
+
+    .subnav {
+        width: 100%;
+    }
+
+    .fixed-subnav {
+        justify-content: start;
+    }
+
+    .choice-text {
+        font-size: 10px;
+    }
+
+    .ring {
+        width: 80px;
+    }
+}
