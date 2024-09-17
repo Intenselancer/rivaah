@@ -1,3 +1,154 @@
+// sub-navbar
+window.addEventListener('scroll', function() {
+    const subnav = document.querySelector('.subnav'); // Get the sub-navbar
+    const occasionSection = document.querySelector('.occassion'); // Get the occasion section
+
+    const occasionTop = occasionSection.getBoundingClientRect().top; // Top of the occasion section
+    const occasionBottom = occasionSection.getBoundingClientRect().bottom; // Bottom of the occasion section
+
+    // Check if the occasion section is in view (scrolling to it)
+    if (occasionTop <= 0 && occasionBottom > 0) {
+        subnav.classList.add('show-subnav'); // Show sub-navbar
+        subnav.classList.add('fixed-subnav'); // Make it fixed
+    } else {
+        subnav.classList.remove('fixed-subnav'); // Remove fixed when out of section
+        subnav.classList.remove('show-subnav'); // Hide sub-navbar when outside the section
+    }
+});
+
+
+
+// Occassion slider
+const contentSliderOcc = document.querySelector('.content-slider-occ'); // Content slider div
+const imageSliderOcc = document.querySelector('.image-slider-occ'); // Image slider div
+
+let currentContentPositionOcc = 0;
+let currentImagePositionOcc = 0;
+let currentOptionOcc = 'Nishayathartham'; // Initial option
+
+// Function to get dynamic slide widths
+function getSlideWidthsOcc() {
+    let contentSlideWidthOcc = 500;
+    let imageSlideWidthOcc = 325;
+
+    if (window.innerWidth < 992) {
+        contentSlideWidthOcc = 325;
+        imageSlideWidthOcc = 325;
+    }
+
+    return { contentSlideWidthOcc, imageSlideWidthOcc };
+}
+
+// Mapping options to their respective positions
+function getOptionMappingOcc() {
+    const { contentSlideWidthOcc } = getSlideWidthsOcc();
+    
+    return {
+        0: 'Nishayathartham',
+        [contentSlideWidthOcc]: 'Gauri-Puja',
+        [2 * contentSlideWidthOcc]: 'Muhurtam', // Adjust based on the number of slides
+        [3 * contentSlideWidthOcc]: 'Reception' // Adjust based on the number of slides
+    };
+}
+
+// Function to move the sliders using buttons
+function moveSliderByButtonOcc(direction) {
+    const { contentSlideWidthOcc, imageSlideWidthOcc } = getSlideWidthsOcc();
+    const maxContentScrollOcc = contentSliderOcc.scrollWidth - contentSliderOcc.clientWidth;
+    const maxImageScrollOcc = imageSliderOcc.scrollWidth - imageSliderOcc.clientWidth;
+
+    if (direction === 'left') {
+        currentContentPositionOcc = Math.max(currentContentPositionOcc - contentSlideWidthOcc, 0);
+        currentImagePositionOcc = Math.max(currentImagePositionOcc - imageSlideWidthOcc, 0);
+    } else if (direction === 'right') {
+        currentContentPositionOcc = Math.min(currentContentPositionOcc + contentSlideWidthOcc, maxContentScrollOcc);
+        currentImagePositionOcc = Math.min(currentImagePositionOcc + imageSlideWidthOcc, maxImageScrollOcc);
+    }
+
+    // Apply the transformations
+    contentSliderOcc.style.transform = `translateX(-${currentContentPositionOcc}px)`;
+    imageSliderOcc.style.transform = `translateX(-${currentImagePositionOcc}px)`;
+
+    // Update the active option based on the new position
+    const optionMappingOcc = getOptionMappingOcc();
+    const newOptionOcc = optionMappingOcc[currentContentPositionOcc];
+    updateActiveOptionOcc(newOptionOcc);
+}
+
+// Left Button Click
+document.querySelector('.slide-left-occ').addEventListener('click', () => {
+    moveSliderByButtonOcc('left');
+});
+
+document.querySelector('.slide-right-occ').addEventListener('click', () => {
+    moveSliderByButtonOcc('right');
+});
+
+// Option-based slider movement
+const optionsOcc = document.querySelectorAll('.subnav-option'); // Option elements
+
+// Function to move sliders based on selected option
+function moveSliderByOptionOcc(selectedOption) {
+    const { contentSlideWidthOcc, imageSlideWidthOcc } = getSlideWidthsOcc();
+    const slideWidthsByOptionOcc = {
+        'Nishayathartham': { content: 0, image: 0 },
+        'Gauri-Puja': { content: contentSlideWidthOcc, image: imageSlideWidthOcc },
+        'Muhurtam': { content: 2 * contentSlideWidthOcc, image: 2 * imageSlideWidthOcc },
+        'Reception': { content: 3 * contentSlideWidthOcc, image: 3 * imageSlideWidthOcc }
+    };
+
+    const { content: contentOffset, image: imageOffset } = slideWidthsByOptionOcc[selectedOption];
+
+    currentContentPositionOcc = contentOffset;
+    currentImagePositionOcc = imageOffset;
+
+    // Apply the transformations
+    contentSliderOcc.style.transform = `translateX(-${currentContentPositionOcc}px)`;
+    imageSliderOcc.style.transform = `translateX(-${currentImagePositionOcc}px)`;
+
+    // Update the current option
+    currentOption = selectedOption;
+    updateActiveOptionOcc(selectedOption);
+}
+
+// Update the active class based on the selected option
+function updateActiveOptionOcc(selectedOption) {
+    document.querySelector('.subnav-option.active').classList.remove('active');
+    document.querySelector(`[data-option="${selectedOption}"]`).classList.add('active');
+}
+
+// Add click event listeners to each option
+optionsOcc.forEach(option => {
+    option.addEventListener('click', () => {
+        const selectedOption = option.getAttribute('data-option');
+        if (selectedOption !== currentOption) {
+            moveSliderByOptionOcc(selectedOption);
+        }
+    });
+});
+
+// Update slider widths on resize
+window.addEventListener('resize', () => {
+    // Adjust slider positions based on new dimensions
+    moveSliderByButtonOcc('right'); // or left, depending on your current position
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Getin Touch Slider 
+
 const contentSlider = document.querySelector('.content-slider'); // Content slider div
 const imageSlider = document.querySelector('.image-slider'); // Image slider div
 
