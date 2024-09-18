@@ -271,6 +271,7 @@ input[type="tel"] {
 
 .ring {
     width: 80px;
+    margin-right: 5px;
 }
 
 .item:hover {
