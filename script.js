@@ -72,11 +72,11 @@ let currentOptionOcc = 'Nishayathartham'; // Initial option
 // Function to get dynamic slide widths
 function getSlideWidthsOcc() {
     let contentSlideWidthOcc = 500;
-    let imageSlideWidthOcc = 325;
+    let imageSlideWidthOcc = 365;
 
     if (window.innerWidth < 992) {
         contentSlideWidthOcc = 325;
-        imageSlideWidthOcc = 325;
+        imageSlideWidthOcc = 365;
     }
 
     return { contentSlideWidthOcc, imageSlideWidthOcc };
