@@ -1,5 +1,5 @@
 // sub-navbar
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const subnav = document.querySelector('.subnav'); // Get the sub-navbar
     const occasionSection = document.querySelector('.occassion'); // Get the occasion section
 
@@ -15,6 +15,49 @@ window.addEventListener('scroll', function() {
         subnav.classList.remove('show-subnav'); // Hide sub-navbar when outside the section
     }
 });
+
+
+
+// Get all video elements and buttons
+document.addEventListener('DOMContentLoaded', () => {
+    // Get all video elements and buttons
+    const videos = document.querySelectorAll('.background-video');
+    let currentSlide = 0;
+
+    // Navigation buttons
+    const nextSlideButton = document.getElementById('next-slide');
+    const prevSlideButton = document.getElementById('prev-slide');
+
+    // Event listeners for next and previous slide
+    nextSlideButton.addEventListener('click', () => {
+        changeSlide('next');
+    });
+
+    prevSlideButton.addEventListener('click', () => {
+        changeSlide('prev');
+    });
+
+    function changeSlide(direction) {
+        // Hide the current video
+        videos[currentSlide].classList.remove('active-video');
+
+        // Update the currentSlide index
+        if (direction === 'next') {
+            currentSlide = (currentSlide + 1) % videos.length;
+        } else if (direction === 'prev') {
+            currentSlide = (currentSlide - 1 + videos.length) % videos.length;
+        }
+
+        // Show the next video
+        videos[currentSlide].classList.add('active-video');
+    }
+
+    // Auto slide every 5 seconds
+    setInterval(() => {
+        changeSlide('next');
+    }, 5000);
+});
+
 
 
 
@@ -42,7 +85,7 @@ function getSlideWidthsOcc() {
 // Mapping options to their respective positions
 function getOptionMappingOcc() {
     const { contentSlideWidthOcc } = getSlideWidthsOcc();
-    
+
     return {
         0: 'Nishayathartham',
         [contentSlideWidthOcc]: 'Gauri-Puja',
@@ -174,7 +217,7 @@ function getSlideWidths() {
 // Mapping options to their respective positions
 function getOptionMapping() {
     const { contentSlideWidth } = getSlideWidths();
-    
+
     return {
         0: 'nearest-store',
         [contentSlideWidth]: 'appointment',
