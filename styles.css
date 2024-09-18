@@ -67,6 +67,7 @@ input[type="tel"] {
     background-image: url('./assets/Hero-bg.png');
     background-size: cover;
     border-radius: 15px;
+    box-shadow: inset 0px -20px 30px rgba(21, 21, 21, 0.726);
 }
 
 .hero-box {
@@ -266,6 +267,92 @@ input[type="tel"] {
     color: #832729;
 }
 
+
+/* spotlight */
+.spotlight-img {
+    width: 250px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.spotlight-img img {
+    width: 250px;
+    object-fit: cover;
+    transition: all 300ms ease-in-out;
+}
+
+.spotlight-img img:hover {
+    scale: 1.2;
+    transition: all 300ms ease-in-out;
+}
+
+.spotlight-img .view-img {
+    opacity: 50%;
+}
+
+.spotlight-img .view-img:hover {
+    opacity: 100%;
+}
+
+.view-arr {
+    border: 1px solid #490A0C;
+    padding: 2px 5px;
+    border-radius: 50%;
+    color: #490A0C;
+    cursor: pointer;
+}
+
+.view-arr:hover {
+    background: #631517;
+    color: white;
+}
+
+/* spotlight video */
+.bg-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.background-video.active-video {
+    opacity: 1;
+}
+
+.bg-video {
+    z-index: 1;
+    position: relative;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.video-slider {
+    display: flex;
+    width: 66%;
+    height: 66%;
+}
+
+.mob-arr {
+    position: absolute;
+    width: 375px;
+    height: 525px;
+    font-size: 20px;
+    z-index: 2;
+}
+
+
+
+
+
 /* checklist */
 .checkbox-1 {
     position: absolute;
@@ -302,6 +389,7 @@ input[type="tel"] {
     top: 33rem;
     left: 15rem;
 }
+
 
 /* Try your Wedding look today */
 .try-look-btn {
@@ -473,6 +561,24 @@ input[type="tel"] {
     }
 }
 
+@media (max-width: 980px) {
+    .bg-video {
+        z-index: 1;
+        position: relative;
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+    }
+
+    .video-slider {
+        display: flex;
+        width: 94%;
+        height: 94%;
+    }
+}
+
+/* @media (max-width: 1100px) {} */
+
 @media (max-width:992px) {
     .content-slider {
         --slide-width: 325px;
@@ -496,7 +602,7 @@ input[type="tel"] {
     }
 
     .btn-box {
-        width: 350px;
+        width: 300px;
         z-index: 10;
     }
 }
@@ -539,9 +645,26 @@ input[type="tel"] {
     .ring {
         width: 80px;
     }
+
+    .spotlight-img {
+        width: 150px;
+    }
+
+    .spotlight-img img {
+        width: 150px;
+    }
 }
 
 @media (max-width: 450px) {
+
+    /* spotlight */
+    .mob-arr {
+        position: absolute;
+        width: 310px;
+        height: 525px;
+        font-size: 20px;
+        z-index: 2;
+    }
 
     /* checklist */
     .checkbox-1 {
@@ -579,4 +702,46 @@ input[type="tel"] {
         top: 290px;
         left: 130px;
     }
+
+}
+
+@media (max-width: 335px) {
+
+    /* checklist */
+    .checkbox-1 {
+        position: absolute;
+        top: 48px;
+        left: 150px;
+    }
+
+    .checkbox-2 {
+        position: absolute;
+        top: 115px;
+        left: 140px;
+    }
+
+    .checkbox-3 {
+        position: absolute;
+        top: 130px;
+        left: 215px;
+    }
+
+    .checkbox-4 {
+        position: absolute;
+        top: 135px;
+        left: 140px;
+    }
+
+    .checkbox-5 {
+        position: absolute;
+        top: 180px;
+        left: 130px;
+    }
+
+    .checkbox-6 {
+        position: absolute;
+        top: 235px;
+        left: 115px;
+    }
+
 }
