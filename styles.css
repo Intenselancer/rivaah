@@ -67,7 +67,7 @@ input[type="tel"] {
     background-image: url('./assets/Hero-bg.png');
     background-size: cover;
     border-radius: 15px;
-    box-shadow: inset 0px -20px 30px rgba(21, 21, 21, 0.726);
+    box-shadow: inset 0px -35px 35px rgba(21, 21, 21, 0.797);
 }
 
 .expo {
@@ -278,7 +278,14 @@ input[type="tel"] {
 }
 
 .choice {
+    font-size: 20px;
     color: #832729;
+    margin-top: 0.5rem;
+}
+
+.choice-text {
+    color: rgba(0, 0, 0, 0.56);
+    font-size: 15px;
 }
 
 
@@ -541,8 +548,9 @@ input[type="tel"] {
 }
 
 .title-font {
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: #832729;
+    line-height: 2.3rem;
 }
 
 .content-slider {
@@ -676,6 +684,7 @@ input[type="tel"] {
     }
 
     .choice-text {
+        color: rgba(0, 0, 0, 0.56);
         font-size: 10px;
     }
 
