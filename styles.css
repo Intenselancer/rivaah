@@ -181,7 +181,7 @@ input[type="tel"] {
 }
 
 .font-san {
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
 }
 
 .show-subnav {
@@ -213,7 +213,7 @@ input[type="tel"] {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-family: sans-serif;
+    font-family: 'IBM Plex Sans';
 }
 
 .subnav-option.active {
@@ -270,8 +270,8 @@ input[type="tel"] {
 }
 
 .ring {
-    width: 80px;
-    margin-right: 5px;
+    width: 60px;
+    margin-right: 10px;
 }
 
 .item:hover {
@@ -279,14 +279,15 @@ input[type="tel"] {
 }
 
 .choice {
-    font-size: 20px;
+    font-size: 18px;
     color: #832729;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
 }
 
 .choice-text {
     color: rgba(0, 0, 0, 0.56);
-    font-size: 15px;
+    font-size: 12px;
+    margin-top: -5px;
 }
 
 
@@ -318,7 +319,7 @@ input[type="tel"] {
 
 .view-arr {
     border: 1px solid #490A0C;
-    padding: 2px 5px;
+    padding: 3px 7px;
     border-radius: 50%;
     color: #490A0C;
     cursor: pointer;
@@ -359,15 +360,18 @@ input[type="tel"] {
 
 .video-slider {
     display: flex;
-    width: 66%;
-    height: 66%;
+    width: 59%;
+    height: 59%;
 }
 
 .spot-title {
-    margin-top: -5.5rem;
+    padding: 5px;
+    margin-top: -8.5rem;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: #832729;
+    background: #FFFFFF;
+    z-index: 3;
 }
 
 .rig-sec {
@@ -387,6 +391,14 @@ input[type="tel"] {
 
 
 /* checklist */
+.check-round {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+}
+
 .checkbox-1 {
     position: absolute;
     top: 6.3rem;
@@ -611,8 +623,8 @@ input[type="tel"] {
 
     .video-slider {
         display: flex;
-        width: 94%;
-        height: 94%;
+        width: 84%;
+        height: 84%;
     }
 
     .spot-title {
@@ -694,7 +706,7 @@ input[type="tel"] {
     }
 
     .ring {
-        width: 55px;
+        width: 45px;
     }
 
     .spotlight-img {
@@ -714,6 +726,13 @@ input[type="tel"] {
         height: 525px;
         font-size: 20px;
         z-index: 2;
+    }
+
+    .spot-title {
+        margin-top: -10px;
+        font-weight: 700;
+        font-size: 0.6rem;
+        color: #832729;
     }
 
     /* checklist */
