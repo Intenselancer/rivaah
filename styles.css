@@ -4,12 +4,17 @@ body {
     font-family: "Fraunces", serif;
 }
 
-nav {
-    padding: 15px;
-}
-
 .primary-text-color {
     color: #380809;
+}
+
+.a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.a:hover {
+    color: #FFFFFF;
 }
 
 .ser {
@@ -24,22 +29,6 @@ input[type="tel"] {
     border: none;
     padding: 3px;
     outline: none;
-}
-
-.nav-icons i {
-    margin: 0 10px;
-    color: #490A0C;
-    cursor: pointer;
-}
-
-.icons i {
-    margin: 0 5px;
-    color: #490A0C;
-    cursor: pointer;
-}
-
-.navbar-logo img {
-    max-height: 50px;
 }
 
 .headings {
@@ -115,6 +104,7 @@ input[type="tel"] {
     border: 1px solid #FFFFFF;
     color: #FFFFFF;
     transition: all 300ms ease-in-out;
+    text-decoration: none;
 }
 
 .chip:hover {
@@ -393,49 +383,68 @@ input[type="tel"] {
 
 
 /* checklist */
-.check-round {
-    width: 0.8rem;
-    height: 0.8rem;
+
+.pulse {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 15px;
+    width: 15px;
+    top: 0;
+    margin-top: -0.6rem;
+    margin-left: -0.6rem;
+    transform: translate(-5px, 5px);
+}
+
+.ping {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 50%;
-    border: none;
-    outline: none;
+    animation: ping 1s infinite;
 }
 
-.checkbox-1 {
-    position: absolute;
-    top: 6.3rem;
-    left: 20rem;
+.dot {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
 }
 
-.checkbox-2 {
-    position: absolute;
-    top: 16rem;
-    left: 19rem;
+@keyframes ping {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+
+    75% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
 }
 
-.checkbox-3 {
-    position: absolute;
-    top: 18.5rem;
-    left: 30rem;
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    border-radius: 50%;
+    appearance: none;
+    outline-offset: 2px;
+    cursor: pointer;
+    z-index: 100;
 }
 
-.checkbox-4 {
-    position: absolute;
-    top: 19.5rem;
-    left: 19rem;
+input[type="checkbox"]:checked {
+    background-color: #490a0cc2;
 }
 
-.checkbox-5 {
-    position: absolute;
-    top: 25rem;
-    left: 19rem;
-}
 
-.checkbox-6 {
-    position: absolute;
-    top: 33rem;
-    left: 15rem;
-}
 
 
 /* Try your Wedding look today */
